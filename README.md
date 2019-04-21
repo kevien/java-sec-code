@@ -43,8 +43,8 @@ Viarus
 
 ### IDEA
 
-1.mvn clean package
-2.将pom.xml拖入到idea中，Run Application即可
+* mvn clean package
+* 将pom.xml拖入到idea中，Run Application即可
 
 ### Jar包
 
