@@ -1,6 +1,7 @@
 package org.joychou.controller;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,11 +21,16 @@ public class XSS {
     @ResponseBody
     public static String ssrf_URLConnection(HttpServletRequest request)
     {
-        String con = request.getParameter("con");
-        return con;
+        // vul code
+          String con = request.getParameter("con");
+//        return con;
 
-        // fix code
+        // fix code 1
         // return encode(con);
+
+        // fix code 2
+         return StringEscapeUtils.escapeHtml(con);
+
     }
 
     public static String encode(String origin) {

@@ -23,7 +23,8 @@ public class Rce {
     @RequestMapping("/exec")
     @ResponseBody
     public String CommandExec(HttpServletRequest request) {
-        String cmd = request.getParameter("cmd").toString();
+        String cmd = "ping -c 2 " + request.getParameter("ip").toString();
+        System.out.println(cmd);
         Runtime run = Runtime.getRuntime();
         String lineStr = "";
 

@@ -27,7 +27,7 @@ public class SQLI {
         String driver = "com.mysql.jdbc.Driver";
         String url = "jdbc:mysql://localhost:3306/sectest";
         String user = "root";
-        String password = "woshishujukumima";
+        String password = "858012456";
         String result = "";
         try {
             Class.forName(driver);
